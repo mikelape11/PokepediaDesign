@@ -1,0 +1,110 @@
+/*
+ * Definitions
+ */
+
+// Nav
+@nav-list-margin: 0;
+@nav-item-margin: 0;
+
+// Nav Inline
+@nav-inline-item-margin: 0 1rem;
+
+
+/*
+ * Nav
+ */
+
+nav,
+.nav {
+
+    ul {
+        margin: @nav-list-margin;
+        list-style: none;
+
+        li {
+            margin: @nav-item-margin;
+        }
+    }
+}
+
+.nav-inline {
+
+    ul {
+
+        li {
+            display: inline-block;
+            margin: @nav-inline-item-margin;
+        }
+    }
+}
+
+.poll-menu {
+  margin: 0rem 3rem;
+
+  li{
+    display: inline-block;
+    padding: 0px 10px;
+
+    >div{
+      &.active{
+        border-bottom: 5px solid @primary;
+      }
+
+      &:hover:not(.active){
+        border-bottom: 5px solid @primary;
+        cursor: pointer;
+        }
+    }
+
+
+    .pool-menu-container{
+      .flex-display();
+      align-items: center;
+      color: @black;
+
+      .basic, .intermediate, .advance{
+        .flex-display();
+        justify-content: center;
+        align-items: center;
+        background-color: @primary;
+        height: 25px;
+        padding: 1rem 1rem;
+        border-radius: 18px;
+        margin-right: 2rem;
+
+        b{
+          color: @primary;
+        }
+
+      }
+      .historical{
+        padding-bottom: 1rem;
+        .text-center;
+        .font-size-xlarge();
+      }
+    }
+  }
+}
+
+.poll-menu2 {
+  margin: 0rem 0rem;
+
+  li{
+    display:inline-block;
+    padding: 0 30px;
+    .text-center();
+
+    a{
+      color: @black;
+    }
+
+    #unique, #cumulative, #average, #evolution{
+      border-bottom: 5px solid @primary;
+    }
+
+    &.active,
+    &:hover{
+      border-bottom: 5px solid @primary;
+    }
+  }
+}

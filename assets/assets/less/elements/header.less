@@ -1,0 +1,25 @@
+.header {
+    width: 100%;
+    .flex-display;
+    .justify-content(space-between);
+    .align-items(center);
+    border-bottom: 1px solid @white;
+    border-right: 1px solid @white;
+    padding: 1rem 2rem;
+    overflow-x: auto;
+
+    &__actions {
+        .flex-display;
+        .justify-content(space-between);
+        .align-items(center);
+        gap: 2rem;
+
+        .select-custom, .field {
+            min-width: 18rem;
+
+            @media @large-up {
+                min-width: 30rem;
+            }
+        }
+    }
+}

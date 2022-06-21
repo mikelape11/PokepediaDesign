@@ -1,0 +1,55 @@
+<header class="header">
+    
+    <div class="header__info"></div>
+
+    <div class="header__actions">
+
+        <div class="select-custom">
+            <input placeholder="Generación" class="select-custom__field">
+            <div class="select-custom__field open" id="sc-field1"></div>
+            <div class="select-custom__options" id="sc-labels1">
+                <label>1º Generación</label>
+                <label>2º Generación</label>
+                <label>3º Generación</label>
+                <label>4º Generación</label>
+                <label>5º Generación</label>
+                <label>6º Generación</label>
+                <label>7º Generación</label>
+                <label>8º Generación</label>
+            </div>
+        </div>
+
+        <div class="field field--search">
+            <input placeholder="Buscar..." type="text">
+        </div>
+
+    </div>
+
+</header>
+
+<section class="main-page" id="page_pokedex">
+
+    <div class="cards">
+
+        <% var times = 32;
+        for( var i=0; i <times+1; i++) { %>
+
+        <div class="card">
+            <img src="/assets/images/pokemon/1.png" alt="" class="card__img">
+            <h3 class="card__name">Bulbasaur</h3>
+
+            <div class="card__types">
+                <div class="card__type card__type--grass">Planta</div>
+                <div class="card__type card__type--poison">Veneno</div>
+            </div>
+
+            <h2 class="card__number"><span>#</span>001</h2>
+        </div>
+
+        <% } %>
+
+        <!-- <div class="card"></div> -->
+
+    </div>
+
+</section>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <% include ../partials/head.ejs%>
+</head>
+
+<body>
+    <div id="app">
+        <% include ../partials/sidebar.ejs%>
+
+        <main class="main">
+            <%- body %>
+        </main>
+    </div>
+
+    <script src="/assets/javascripts/main.js"></script>
+    <script src="/dependencies/sails.io.js"></script>
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+
+</html>

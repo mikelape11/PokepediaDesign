@@ -1,0 +1,21 @@
+@sidebar-width: 29rem;
+@sidebar-width-collapse: 11rem;
+
+.sidebar{
+    position: relative;
+    height: 100vh;
+    background-color: @black;
+    box-shadow: 4px 0px 24px @black;
+    border-right: 1px solid @white;
+    .hide;
+
+    @media @small-up {
+        .show;
+        min-width: @sidebar-width-collapse;
+    }
+
+    @media @large-up {
+        .show;
+        min-width: @sidebar-width;
+    }
+}
