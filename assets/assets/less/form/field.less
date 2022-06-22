@@ -42,6 +42,23 @@
     }
   }
 
+  &--search {
+
+    input {
+        padding-right: 5rem;
+    }
+
+    &::after {
+        .fonticon_search();
+        position: absolute;
+        top: 50%;
+        right: 1.2rem;
+        transform: translate(0, -50%);
+        pointer-events: none;
+        color: @light;
+    }
+  }
+
   &--calendar{
     &::after{
       // .fonticon_calendar();

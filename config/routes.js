@@ -18,9 +18,11 @@ module.exports.routes = {
   * `assets` directory)                                                      *
   *                                                                          *
   ***************************************************************************/
-
-  /* LOGIN */
-  '/': { view: 'pages/auth/login', locals: { layout: 'layouts/auth'} },
+ 
+ //   '/': { view: 'pages/auth/login', locals: { layout: 'layouts/auth'} },
+  
+  /* LOADING */
+  '/loading': { view: 'pages/loading/loading' },
 
   /* POKEDEX */
   '/pokedex': { view: 'pages/pokedex/pokedex' },

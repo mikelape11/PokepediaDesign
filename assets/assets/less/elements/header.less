@@ -1,24 +1,44 @@
 .header {
-    width: 100%;
     .flex-display;
     .justify-content(space-between);
     .align-items(center);
-    border-bottom: 1px solid @white;
-    border-right: 1px solid @white;
-    padding: 1rem 2rem;
-    overflow-x: auto;
+    .flex-wrap(wrap);
+    width: 100%;
+    border-bottom: 1px solid @light;
+    padding: 1rem 0;
+    
+    @media @small-up {
+        padding: 1rem 2rem;
+    }
 
     &__actions {
         .flex-display;
         .justify-content(space-between);
         .align-items(center);
-        gap: 2rem;
+        .flex-wrap(wrap);
+        column-gap: 2rem;
+        row-gap: 0.5rem;
 
         .select-custom, .field {
             min-width: 18rem;
+            width: 18rem;
 
             @media @large-up {
                 min-width: 30rem;
+            }
+        }
+
+        .select-custom {
+            position: relative;
+
+            &.icon--arrow-down:before {
+                position: absolute;
+                top: 50%;
+                right: 1.2rem;
+                transform: translate(0, -50%);
+                color: @light;
+                display: inline-block;
+                z-index: 9999999999999999999;
             }
         }
     }

@@ -361,35 +361,35 @@ body {
 @font-face {
   font-family: 'ttcommons';
   src: url('/assets/fonts/ttcommons/TTCommons-Regular.eot');
-  src: url('/assets/fonts/ttcommons/TTCommons-Regular.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-Regular.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-Regular.woff') format('woff'), url('/assets/fonts/ttcommons/TTCommons-Regular.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-Regular.svg#icon') format('svg');
+  src: url('/assets/fonts/ttcommons/TTCommons-Regular.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-Regular.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-Regular.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-Regular.svg#icon') format('svg');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'ttcommons';
   src: url('/assets/fonts/ttcommons/TTCommons-Medium.eot');
-  src: url('/assets/fonts/ttcommons/TTCommons-Medium.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-Medium.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-Medium.woff') format('woff'), url('/assets/fonts/ttcommons/TTCommons-Medium.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-Medium.svg#icon') format('svg');
+  src: url('/assets/fonts/ttcommons/TTCommons-Medium.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-Medium.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-Medium.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-Medium.svg#icon') format('svg');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'ttcommons';
   src: url('/assets/fonts/ttcommons/TTCommons-SemiBold.eot');
-  src: url('/assets/fonts/ttcommons/TTCommons-SemiBold.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-SemiBold.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-SemiBold.woff') format('woff'), url('/assets/fonts/ttcommons/TTCommons-SemiBold.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-SemiBold.svg#icon') format('svg');
+  src: url('/assets/fonts/ttcommons/TTCommons-SemiBold.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-SemiBold.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-SemiBold.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-SemiBold.svg#icon') format('svg');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'ttcommons';
   src: url('/assets/fonts/ttcommons/TTCommons-Bold.eot');
-  src: url('/assets/fonts/ttcommons/TTCommons-Bold.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-Bold.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-Bold.woff') format('woff'), url('/assets/fonts/ttcommons/TTCommons-Bold.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-Bold.svg#icon') format('svg');
+  src: url('/assets/fonts/ttcommons/TTCommons-Bold.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/ttcommons/TTCommons-Bold.svg#icon') format('svg'), url('/assets/fonts/ttcommons/TTCommons-Bold.ttf') format('truetype'), url('/assets/fonts/ttcommons/TTCommons-Bold.svg#icon') format('svg');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'fabrika';
-  src: url('/assets/fonts/fabrika/fabrika.eot');
-  src: url('/assets/fonts/fabrika/fabrika.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/fabrika/fabrika.svg#icon') format('svg'), url('/assets/fonts/fabrika/fabrika.woff') format('woff'), url('/assets/fonts/fabrika/fabrika.ttf') format('truetype'), url('/assets/fonts/fabrika/fabrika.svg#icon') format('svg');
+  font-family: 'pokepedia';
+  src: url('/assets/fonts/pokepedia/pokepedia.eot');
+  src: url('/assets/fonts/pokepedia/pokepedia.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/pokepedia/pokepedia.svg#icon') format('svg'), url('/assets/fonts/pokepedia/pokepedia.ttf') format('truetype'), url('/assets/fonts/pokepedia/pokepedia.svg#icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6011,6 +6011,26 @@ select {
 .field.error .box-error p.error:not([hidden]) ~ p {
   display: none;
 }
+.field--search input {
+  padding-right: 5rem;
+}
+.field--search::after {
+  content: "\e90c";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  transform: translate(0, -50%);
+  pointer-events: none;
+  color: #D0D0D0;
+}
 .field--calendar::after {
   position: absolute;
   top: 58%;
@@ -6766,9 +6786,13 @@ table td,
   background-color: #070809;
   box-shadow: 4px 0px 24px #070809;
   border-right: 1px solid #FFFFFF;
+  padding: 2.5rem 2.2rem;
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
+}
+.sidebar.sidebar__collapse {
+  min-width: 11rem;
 }
 @media (min-width: 768px) {
   .sidebar {
@@ -6786,6 +6810,192 @@ table td,
     min-width: 29rem;
   }
 }
+.sidebar__button {
+  position: absolute;
+  top: 50%;
+  right: -2.1rem;
+  transform: translate(0, -50%);
+  width: 4rem;
+  height: 4rem;
+  background-color: #070809;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  box-shadow: 4px 0px 24px #070809;
+  animation: spin 4s linear;
+}
+.sidebar__button .collapse {
+  width: 2rem;
+  height: 2rem;
+  transition: all 1s ease-in-out;
+}
+.sidebar__collapse .sidebar__button .collapse {
+  transform: rotate(630deg);
+}
+.sidebar__logo {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  height: 5rem;
+  gap: 2rem;
+}
+.sidebar__collapse .sidebar__logo {
+  gap: 0;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+@media (min-width: 1280px) {
+  .sidebar__logo {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+.sidebar__logo .logo-icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+}
+.sidebar__logo .logo {
+  object-fit: cover;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+.sidebar__collapse .sidebar__logo .logo {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+@media (min-width: 1280px) {
+  .sidebar__logo .logo {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+.sidebar__nav {
+  margin-top: 6.5rem;
+}
+.sidebar__li {
+  margin: 2rem 0;
+  padding: 0;
+  border: 1px solid #070809;
+  border-radius: 0.4rem;
+}
+.sidebar__li:hover:nth-child(1),
+.sidebar__li--active:nth-child(1) {
+  background-color: #9C2221;
+  border: 1px solid #F43839;
+}
+.sidebar__li:hover:nth-child(2),
+.sidebar__li--active:nth-child(2) {
+  background-color: #CD5C0D;
+  border: 1px solid #F1A02B;
+}
+.sidebar__li:hover:nth-child(3),
+.sidebar__li--active:nth-child(3) {
+  background-color: #036D49;
+  border: 1px solid #2DB285;
+}
+.sidebar__li:hover:nth-child(4),
+.sidebar__li--active:nth-child(4) {
+  background-color: #0026B2;
+  border: 1px solid #0084DB;
+}
+.sidebar__li:hover:nth-child(5),
+.sidebar__li--active:nth-child(5) {
+  background-color: #024F60;
+  border: 1px solid #30B7D6;
+}
+.sidebar__li:hover:nth-child(6),
+.sidebar__li--active:nth-child(6) {
+  background-color: #F59300;
+  border: 1px solid #FFD700;
+}
+.sidebar__li:hover:nth-child(7),
+.sidebar__li--active:nth-child(7) {
+  background-color: #181B1D;
+  border: 1px solid #5E5E5E;
+}
+.sidebar__li:hover:nth-child(8),
+.sidebar__li--active:nth-child(8) {
+  background-color: #7C0036;
+  border: 1px solid #EC407A;
+}
+.sidebar__a {
+  position: relative;
+  font-family: "ttcommons", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 0rem;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  color: #FFFFFF;
+  height: 4rem;
+  padding: 2rem 1rem;
+  white-space: nowrap;
+}
+@media (min-width: 1280px) {
+  .sidebar__a {
+    font-size: 1.8rem;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+  }
+}
+.sidebar__collapse .sidebar__a {
+  font-size: 0rem;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+}
+.sidebar__a:after {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 !important;
+  margin-top: -0.3rem !important;
+  padding-left: 0.2rem;
+}
 #app {
   display: -webkit-flex;
   display: -moz-flex;
@@ -6796,15 +7006,14 @@ table td,
 }
 #app .main {
   overflow: auto;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
 }
 @media (min-width: 768px) {
   #app .main {
-    padding: 3rem 2.5rem;
+    padding: 2.5rem;
   }
 }
 .header {
-  width: 100%;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -6818,10 +7027,18 @@ table td,
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  border-bottom: 1px solid #FFFFFF;
-  border-right: 1px solid #FFFFFF;
-  padding: 1rem 2rem;
-  overflow-x: auto;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+  border-bottom: 1px solid #D0D0D0;
+  padding: 1rem 0;
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+  }
 }
 .header__actions {
   display: -webkit-flex;
@@ -6837,17 +7054,35 @@ table td,
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
-  gap: 2rem;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 0.5rem;
 }
 .header__actions .select-custom,
 .header__actions .field {
   min-width: 18rem;
+  width: 18rem;
 }
 @media (min-width: 1280px) {
   .header__actions .select-custom,
   .header__actions .field {
     min-width: 30rem;
   }
+}
+.header__actions .select-custom {
+  position: relative;
+}
+.header__actions .select-custom.icon--arrow-down:before {
+  position: absolute;
+  top: 50%;
+  right: 1.2rem;
+  transform: translate(0, -50%);
+  color: #D0D0D0;
+  display: inline-block;
+  z-index: 9999999999999999999;
 }
 .search {
   margin: 1.5rem 3rem;
@@ -6869,57 +7104,24 @@ table td,
 .search input::placeholder {
   color: #070809;
 }
-.loader-content {
-  position: fixed;
-  background: rgba(255, 255, 255, 0.6);
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  z-index: 999;
+#page_loader {
+  width: 100%;
+  height: 100%;
+  padding: 0 !important;
+  background-color: #181B1D;
+  position: relative;
+  border-radius: 0.8rem;
 }
-.loader-content .loader {
-  width: 6em;
-  height: 6em;
-  margin: auto;
+#page_loader .loader img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 50%;
 }
-.loader-content .loader__child {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: sk-double-bounce 2s infinite ease-in-out;
-  animation: sk-double-bounce 2s infinite ease-in-out;
-}
-.loader-content .loader__child--item2 {
-  -webkit-animation-delay: -1s;
-  animation-delay: -1s;
-}
-@-webkit-keyframes sk-double-bounce {
-  0%,
-  100% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
-  }
-}
-@keyframes sk-double-bounce {
-  0%,
-  100% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
+@media (min-width: 1025px) {
+  #page_loader .loader img {
+    width: 30%;
   }
 }
 .modal {
@@ -7020,106 +7222,19 @@ table td,
 .modal-content .close a:hover {
   color: #FFFFFF;
 }
-.scroll {
-  position: relative;
+::-webkit-scrollbar {
+  width: 1rem;
 }
-.ps {
-  overflow: hidden !important;
-  overflow-anchor: none;
-  -ms-overflow-style: none;
-  touch-action: auto;
-  -ms-touch-action: auto;
+::-webkit-scrollbar-track {
+  border-radius: 0.8rem;
+  background-color: #181B1D;
 }
-/*
- * Scrollbar rail styles
- */
-.ps__rail-x {
-  display: none;
-  opacity: 0;
-  transition: background-color 0.2s linear, opacity 0.2s linear;
-  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
-  height: 15px;
-  /* there must be 'bottom' or 'top' for ps__rail-x */
-  bottom: 0px;
-  /* please don't change 'position' */
-  position: absolute;
+::-webkit-scrollbar-thumb {
+  background: #D0D0D0;
+  border-radius: 1rem;
 }
-.ps__rail-y {
-  display: none;
-  opacity: 0;
-  transition: background-color 0.2s linear, opacity 0.2s linear;
-  -webkit-transition: background-color 0.2s linear, opacity 0.2s linear;
-  width: 15px;
-  /* there must be 'right' or 'left' for ps__rail-y */
-  right: 0;
-  /* please don't change 'position' */
-  position: absolute;
-}
-.ps--active-x > .ps__rail-x,
-.ps--active-y > .ps__rail-y {
-  display: block;
-  background-color: transparent;
-}
-.ps:hover > .ps__rail-x,
-.ps:hover > .ps__rail-y,
-.ps--focus > .ps__rail-x,
-.ps--focus > .ps__rail-y,
-.ps--scrolling-x > .ps__rail-x,
-.ps--scrolling-y > .ps__rail-y {
-  opacity: 0.6;
-}
-.ps__rail-x:hover,
-.ps__rail-y:hover,
-.ps__rail-x:focus,
-.ps__rail-y:focus {
-  background-color: #eee;
-  opacity: 0.9;
-}
-/*
- * Scrollbar thumb styles
- */
-.ps__thumb-x {
-  background-color: #aaa;
-  border-radius: 6px;
-  transition: background-color 0.2s linear, height 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s linear, height 0.2s ease-in-out;
-  height: 6px;
-  /* there must be 'bottom' for ps__thumb-x */
-  bottom: 2px;
-  /* please don't change 'position' */
-  position: absolute;
-}
-.ps__thumb-y {
-  background-color: #aaa;
-  border-radius: 6px;
-  transition: background-color 0.2s linear, width 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s linear, width 0.2s ease-in-out;
-  width: 6px;
-  /* there must be 'right' for ps__thumb-y */
-  right: 2px;
-  /* please don't change 'position' */
-  position: absolute;
-}
-.ps__rail-x:hover > .ps__thumb-x,
-.ps__rail-x:focus > .ps__thumb-x {
-  background-color: #999;
-  height: 11px;
-}
-.ps__rail-y:hover > .ps__thumb-y,
-.ps__rail-y:focus > .ps__thumb-y {
-  background-color: #999;
-  width: 11px;
-}
-/* MS supports */
-@supports (-ms-overflow-style: none) {
-  .ps {
-    overflow: auto !important;
-  }
-}
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .ps {
-    overflow: auto !important;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: #FFFFFF;
 }
 .cards {
   display: grid;
@@ -7187,20 +7302,6 @@ table td,
   outline: transparent;
   line-height: 2rem;
   box-sizing: border-box;
-}
-@media (min-width: 583px) {
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 972px) {
-}
-@media (min-width: 1138px) {
-}
-@media (min-width: 1503px) {
-}
-@media (min-width: 1673px) {
-}
-@media (min-width: 1858px) {
 }
 .cards .card:hover {
   outline: 2px solid #5FBD58;
@@ -7282,15 +7383,17 @@ table td,
 .select-custom {
   position: relative;
   user-select: none;
+  height: 4.4rem;
 }
 .select-custom__field {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: transparent;
+  background-color: #181B1D;
   color: #FFFFFF;
   border-radius: 2.4rem;
   height: 4.4rem;
+  z-index: 9999;
 }
 .select-custom__field.open,
 .select-custom__field.close {
@@ -7335,17 +7438,20 @@ table td,
   top: 4.4rem;
   left: 0;
   min-width: 18rem;
-  padding: 1.5rem 2rem;
+  padding: 2.5rem 1rem 0.5rem;
   height: auto;
-  background: transparent;
-  z-index: 3;
-  border: 0 0 0.2rem 0.2rem;
+  z-index: 999;
+  border-radius: 0 0 2.4rem 2.4rem;
   border: 1px solid #FFFFFF;
+  border-top: 0;
+  background-color: #181B1D;
+  margin-top: -2rem;
 }
 .select-custom__options label {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.8rem;
   margin: 0.5;
+  cursor: pointer;
 }
 .select-custom__options label:hover {
   background-color: #D0D0D0;
@@ -8477,14 +8583,182 @@ table td,
 /*
   * Fonticons
   */
-/*
-.fonticon_gear() {
-  .fonticon("\e90d");
-}*/
-/*
-.icon--gear:before{
-  .fonticon_gear();
-}*/
+.icon--pokedex:after {
+  content: "\e900";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--move:after {
+  content: "\e901";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--machine:after {
+  content: "\e902";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--location:after {
+  content: "\e903";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--table:after {
+  content: "\e904";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--object:after {
+  content: "\e905";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--game:after {
+  content: "\e906";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--extra:after {
+  content: "\e907";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--arrow-up:before {
+  content: "\e908";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--arrow-left:before {
+  content: "\e909";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--arrow-right:before {
+  content: "\e90a";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--arrow-down:before {
+  content: "\e90b";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--search:before {
+  content: "\e90c";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--info:before {
+  content: "\e90d";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--pause:before {
+  content: "\e90e";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
+.icon--play:before {
+  content: "\e90f";
+  font-family: 'pokepedia';
+  font-size: 2rem;
+  line-height: 1.35;
+  font-weight: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.25em;
+  text-indent: 0;
+}
 /*
   * Pages
   */
