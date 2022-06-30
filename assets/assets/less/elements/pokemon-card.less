@@ -1,45 +1,13 @@
 @card-width: 17.5rem;
 @card-height: 25rem;
 
-.cards {
+.pokemon-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: @card-height;
+    grid-template-columns: repeat(auto-fill, minmax(15.75rem, 2fr));
     gap: 1rem 1rem;
-    padding: 2.4rem 0;
 
-    @media @small-up {
-        padding: 2.4rem;
-    }
-
-    @media (min-width: 583px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 583px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (min-width: 972px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media (min-width: 1138px) {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    @media (min-width: 1503px) { 
-        grid-template-columns: repeat(6, 1fr);
-    }
-    
-    @media (min-width: 1673px) { 
-        grid-template-columns: repeat(7, 1fr);
-    }
-
-    @media (min-width: 1858px) {
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    .card {
+    .pokemon-card {
         position: relative;
         width: auto;
         height: @card-height;

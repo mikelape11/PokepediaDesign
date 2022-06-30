@@ -22,13 +22,16 @@ module.exports.routes = {
  //   '/': { view: 'pages/auth/login', locals: { layout: 'layouts/auth'} },
   
   /* LOADING */
-  '/loading': { view: 'pages/loading/loading' },
 
   /* POKEDEX */
-  '/pokedex': { view: 'pages/pokedex/pokedex' },
+  '/pokedex': { view: 'pages/pokedex/pokedex', locals: { layout: 'layouts/layout'} },
+  '/pokedex/detail': { view: 'pages/pokedex/pokedex-detail', locals: { layout: 'layouts/layout'} },
 
+  /* MOVIMIENTOS */
+  '/movimientos': { view: 'pages/moves/moves', locals: { layout: 'layouts/layout'} },
+  
+  '/loader': { view: 'pages/loader/loader', locals: { layout: 'layouts/layout'} },
 
-  /* MODULE FINANCIAL */
 
 
   /***************************************************************************
