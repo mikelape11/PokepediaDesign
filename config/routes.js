@@ -26,6 +26,7 @@ module.exports.routes = {
   /* POKEDEX */
   '/pokedex': { view: 'pages/pokedex/pokedex', locals: { layout: 'layouts/layout'} },
   '/pokedex/detail': { view: 'pages/pokedex/pokedex-detail', locals: { layout: 'layouts/layout'} },
+  '/pokedex/detail-prueba': { view: 'pages/pokedex/pokedex-detail-grid', locals: { layout: 'layouts/layout'} },
 
   /* MOVIMIENTOS */
   '/movimientos': { view: 'pages/moves/moves', locals: { layout: 'layouts/layout'} },

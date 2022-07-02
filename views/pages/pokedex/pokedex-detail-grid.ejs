@@ -1,0 +1,225 @@
+<header class="header">
+    
+    <div class="header__left">
+        <a href="/pokedex" class="button button-primary icon--arrow-left">Volver</a>
+    </div>
+
+    <div class="header__right">
+        <a class="button button-primary icon--arrow-left">Anterior Pokemon</a>
+        <a class="button button-primary icon--arrow-right">Siguiente Pokemon</a>
+    </div>
+
+</header>
+
+<section class="main-page" id="page_pokedex-detail-grid">
+
+    <div class="poke-grid">
+        <div class="poke-grid__main">
+            <div class="poke-grid__main__front">
+
+                <div class="poke-grid__toggle-button icon--info" id="tgl-btn"></div>
+                <img src="/assets/images/pokemon/1.png" class="poke-grid__img" alt="">
+                    
+                <div class="poke-grid__main__content">
+
+                    <div class="poke-grid__info">
+                        <h3 class="poke-grid__number"><span>#</span>001 - <span>#</span>123</h3>
+                        <h4 class="poke-grid__name">Bulbasaur</h4>
+                    </div>
+    
+                    <div class="poke-grid__types">
+                        <div class="poke-grid__type-content">
+                            <span class="poke-grid__type pokemon__type--grass">Planta</span>
+                            <span class="poke-grid__type pokemon__type--poison">Veneno</span>
+                        </div>
+                    </div>
+                    
+                    <div class="poke-grid__features">
+                        <div class="poke-grid__feature">
+                            <h3 class="poke-grid__title">Altura</h3>
+                            <h4 class="poke-grid__text">0'7 m</h4>
+                        </div>
+                        <div class="poke-grid__feature">
+                            <h3 class="poke-grid__title">Peso</h3>
+                            <h4 class="poke-grid__text">6'9 kg</h4>
+                        </div>
+                    </div>
+
+                    <div class="poke-grid__description">
+                        <h3 class="poke-grid__title">Descripción</h3>
+                        <h4 class="poke-grid__text-description">Bulbasaur es un Pokémon de tipo planta/veneno introducido en la primera generación.</h4>
+                    </div>
+
+                    <div class="poke-grid__cry">
+
+                        <div class="poke-grid__cry-content">
+                            <div class="icon--play" id="play-btn"></div>
+                            <div class="icon--pause hide" id="pause-btn"></div>
+                            <div class="poke-grid__slider">
+                                <input type="range" id="cry" min="0" max="100" value="0">
+                                <div class="poke-grid__bar" id="bar"></div>
+                                <div class="poke-grid__dot"></div>
+                            </div>
+                            <h5 class="poke-grid__timer">0:00</h5>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="poke-grid__main__back ">
+
+                <div class="poke-grid__toggle-button icon--info" id="tgl-btn2"></div>
+
+                <div class="poke-grid__item ">
+                    <h3 class="poke-grid__title">Forma</h3>
+                    <h4 class="poke-grid__form">Forma</h4>
+                </div>
+
+                <div class="poke-grid__item ">
+                    <h3 class="poke-grid__title">Grupo Huevo</h3>
+                    <h4 class="poke-grid__form">Grupo Huevo</h4>
+                </div>
+
+                <div class="poke-grid__item ">
+                    <h3 class="poke-grid__title">Habilidad</h3>
+                    <h4 class="poke-grid__form">Habilidad</h4>
+                </div>
+
+                <div class="poke-grid__item ">
+                    <h3 class="poke-grid__title">Habilidad 2</h3>
+                    <h4 class="poke-grid__form">Habilidad 2</h4>
+                </div>
+
+                <div class="poke-grid__item ">
+                    <h3 class="poke-grid__title">Habilidad Oculta</h3>
+                    <h4 class="poke-grid__form">Habilidad Oculta</h4>
+                </div>
+                
+            </div>
+        </div>
+
+        <ul class="poke-grid__tabs">
+
+            <li class="poke-grid__tab poke-grid__tab--active"><a href="#">General</a></li>
+            <li class="poke-grid__tab"><a href="#">Movimientos</a></li>
+            <li class="poke-grid__tab"><a href="#">Localización</a></li>
+            <li class="poke-grid__tab"><a href="#">Comparación</a></li>
+
+        </ul>
+
+        <div class="poke-grid__stats">
+    
+            <div class="poke-grid__stats__item">
+
+                <h3 class="poke-grid__stats__name">HP:</h3>
+
+                <div class="poke-grid__stats__bar">
+                    <div style="width: 50%;" class="poke-grid__stats__bar2 pokemon__stats__bar2--yellow"></div>
+                </div>
+
+                <div class="poke-grid__stats__info">
+                    <h3 class="poke-grid__stats__number">89</h3>
+                    <div class="icon--arrow-down"></div>
+                </div>
+
+            </div>
+
+            <div class="poke-grid__stats__item">
+
+                <h3 class="poke-grid__stats__name">Ataque:</h3>
+
+                <div class="poke-grid__stats__bar">
+                    <div style="width: 78%;" class="poke-grid__stats__bar2 pokemon__stats__bar2--green"></div>
+                </div>
+
+                <div class="poke-grid__stats__info">
+                    <h3 class="poke-grid__stats__number">120</h3>
+                    <div class="icon--arrow-down"></div>
+                </div>
+
+            </div>
+
+            <div class="poke-grid__stats__item">
+
+                <h3 class="poke-grid__stats__name">Defensa:</h3>
+
+                <div class="poke-grid__stats__bar">
+                    <div style="width: 25%;" class="poke-grid__stats__bar2 pokemon__stats__bar2--orange"></div>
+                </div>
+
+                <div class="poke-grid__stats__info">
+                    <h3 class="poke-grid__stats__number">44</h3>
+                    <div class="icon--arrow-down"></div>
+                </div>
+
+            </div>
+
+            <div class="poke-grid__stats__item">
+
+                <h3 class="poke-grid__stats__name">Ataque Esp:</h3>
+
+                <div class="poke-grid__stats__bar">
+                    <div style="width: 85%;" class="poke-grid__stats__bar2 pokemon__stats__bar2--green"></div>
+                </div>
+
+                <div class="poke-grid__stats__info">
+                    <h3 class="poke-grid__stats__number">130</h3>
+                    <div class="icon--arrow-up"></div>
+                </div>
+
+            </div>
+
+            <div class="poke-grid__stats__item">
+
+                <h3 class="poke-grid__stats__name">Defensa Esp:</h3>
+
+                <div class="poke-grid__stats__bar">
+                    <div style="width: 30%;" class="poke-grid__stats__bar2 pokemon__stats__bar2--orange"></div>
+                </div>
+
+                <div class="poke-grid__stats__info">
+                    <h3 class="poke-grid__stats__number">50</h3>
+                    <div class="icon--arrow-down"></div>
+                </div>
+
+            </div>
+
+            <div class="poke-grid__stats__item">
+
+                <h3 class="poke-grid__stats__name">Velocidad:</h3>
+
+                <div class="poke-grid__stats__bar">
+                    <div style="width: 12%;" class="poke-grid__stats__bar2 pokemon__stats__bar2--red"></div>
+                </div>
+
+                <div class="poke-grid__stats__info">
+                    <h3 class="poke-grid__stats__number">27</h3>
+                    <div class="icon--arrow-down"></div>
+                </div>
+
+            </div>
+
+            <div class="poke-grid__stats__item">
+
+                <h3 class="poke-grid__stats__name">Total:</h3>
+
+                <div class="poke-grid__stats__bar">
+                    <div style="width: 65%;" class="poke-grid__stats__bar2 pokemon__stats__bar2--green"></div>
+                </div>
+
+                <div class="poke-grid__stats__info">
+                    <h3 class="poke-grid__stats__number">140</h3>
+                    <div class="icon--arrow-down"></div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="poke-grid__nature hide"></div>
+        <div class="poke-grid__evolution hide"></div>
+    </div>
+
+</section>

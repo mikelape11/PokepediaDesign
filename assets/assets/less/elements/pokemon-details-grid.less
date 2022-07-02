@@ -15,6 +15,20 @@
 
     &__left {
         position: relative;  
+        height: auto;
+
+        @media (min-width: 1000px) and (max-width: 1500px) {
+            height: 33rem;
+        }
+
+        @media (min-width: 1500px) {
+            .calc(height; "100vh - @{header-height} - 4.8rem - 2.5rem - 1px");
+            width: @pokemon-details-grid-main;
+        }
+
+        &--active {
+            transform: rotateY(180deg);
+        }
     }
 
     &__right {
