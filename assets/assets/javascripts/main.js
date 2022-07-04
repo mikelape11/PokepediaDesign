@@ -23,13 +23,13 @@ if(selectCustomField) {
 
 if(flipBtn) {
     flipBtn.addEventListener("click",  () => {
-        document.querySelector(".poke-grid__main").classList.add("poke-grid__main--active");    
+        document.querySelector(".pokedex-details__main").classList.add("pokedex-details__main--active");    
     })
 }
 
 if(flipBtn2) {
     flipBtn2.addEventListener("click",  () => {
-        document.querySelector(".poke-grid__main").classList.remove("poke-grid__main--active");    
+        document.querySelector(".pokedex-details__main").classList.remove("pokedex-details__main--active");    
     })
 }
 
